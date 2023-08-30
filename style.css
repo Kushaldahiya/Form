@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css');
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+body{
+    height: 100vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(720212.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.conatainer{
+
+
+    
+    position: relative;
+    max-width: 430px;
+    width:100%;
+    display: inline-block;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    height:max-content;
+    box-shadow: 0 0 10px rgba(52,152,219,0.7);
+    
+    margin: 0 20px;
+    transition: box-shadow 0.3s ease;
+}
+.conatainer:hover{
+    box-shadow: 0 0 100px rgba(52, 152, 219, 1);
+}
+
+.conatainer .forms{
+    display:flex;
+    align-items: center;
+    height: auto;
+    width:200%;
+    transition: height 0.2s ease;
+}
+.conatainer .form{
+    width: 50%;
+    padding:30px;
+    background:transparent;
+    transition: margin-left 0.18s ease;
+}
+.conatainer.active .login{
+    margin-left: -50%;
+    opacity: 0;
+    transition: margin-left 0.18s ease, opacity 0.15s ease;
+}
+.conatainer.active .singup{
+    opacity: 1;
+    transition: opacity 0.2s ease;
+}
+.conatainer.active .forms{
+    height: 600px;
+    text-align: center;
+}
+.conatainer .form .title{
+    position: relative;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-size:27px;
+    font-weight: 600;
+    color: cyan;
+    margin-bottom: 20px;
+    
+}
+
+.form .input-field{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin-top: 30px;
+ 
+}
+.input-field input{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 0 35px;
+    color:white;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    outline:none;
+    font-size: 16px;
+    border-bottom: 2px solid #ccc;
+    border-top: 2px solid transparent;
+    background-color: transparent;
+    transition: all 0.2s ease;
+    
+}
+.input-field input:focus {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 23px;
+    transition: all 0.2s ease;
+    background-color: transparent; 
+  }
+
+
+.input-field input::placeholder {
+    color: #ccc;
+}
+.input-fieldinput:focus{
+    border-bottom-color: black;
+}
+.input-field i{
+    position:absolute;
+    top:50%;
+    transform: translateY(-50%);
+    color:#7FFFD4;
+    
+    font-size:23px;
+    transition: all 0.2s ease;
+}
+.input-field input:focus ~ i{
+    animation: glowing-icon 2s infinite alternate;;
+    color: cyan;
+}
+@keyframes glowing-icon {
+    0% {
+      text-shadow: 0 0 10px #7FFFD4;
+    }
+    100% {
+      text-shadow: 0 0 20px cyan;
+    }
+  }
+.input-field i.showidepw{
+    right: 0;
+    cursor:pointer;
+    padding: 4px;
+}
+.input-field i.icon{
+    left:0;
+    
+}
+.form .checkbox-text{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top:20px
+
+}
+.checkbox-text .checkbox-content{
+    display: flex;
+    align-content: center;
+
+}
+.checkbox-content input{
+    margin 0 8px -2px 4px;
+    accent-color: cyan;
+}
+.form .text{
+    color:white;
+    font-size: 14px;
+}
+.form a.text{
+    color:white;
+    text-decoration: none;
+}
+.form a:hover{
+    color: cyan; 
+    background-color: white;
+    color:#000;
+    border-radius:5px;
+    box-shadow: 0px 0px 10px rgba(103,242,209, 0.7);
+}
+.form .button{
+    margin-top: 35px;
+}
+.form .button input{
+    border: none;
+    color:#fff;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius:6px;
+    background-color: cyan;
+    cursor:pointer;
+    transition: all 0.3s ease;
+}
+.button input:hover{
+    background: #03e9f4;
+  color: #000;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #03e9f4,
+              0 0 25px #03e9f4,
+              0 0 50px #03e9f4,
+              0 0 100px #03e9f4;
+}
+.form a:hover{
+    color: cyan; 
+  background-color: white;
+  border-radius:5px;
+  box-shadow: 0px 0px 10px rgba(103,242,209, 0.7);
+}
+
+.form .button{
+    margin-top: 35px;
+}
+.form .button input{
+    border: none;
+    color:#fff;
+    font-size:16px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    background-color: transparent;
+}
+.button input:hover{
+    background-color: white;
+    color:#000;
+}
+.form .login-singup{
+    margin-top:30px;
+    text-align:center;
+}

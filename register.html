@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equip="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="stylesheet"
+      href="ttps://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0-beta3/css/all.min.css"
+    />
+
+    <title>Login and Registration Form</title>
+  </head>
+  <body>
+    <div class="conatainer">
+      <div class="forms">
+        <div class="form singup">
+          <span class="title">Registration</span>
+          <form name="singUpform" onsubmit="signUpValidation()">
+            <div class="input-field">
+              <input type="text" name="name" placeholder="Enter your Name" />
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="input-field">
+              <input type="text" name="email" placeholder="Enter your email" />
+
+              <i class="fa-solid fa-envelope" icon></i>
+            </div>
+            <div class="input-field">
+              <input
+                type="password"
+                name="password"
+                placeholder="create your password"
+                class="password"
+              />
+              <i class="fa-solid fa-lock icon"></i>
+              <i class="fa-solid fa-eye-slash showidepw"></i>
+            </div>
+            <div class="input-field">
+              <input
+                type="password"
+                name="confirmpwd"
+                placeholder="confirm your password"
+                class="password"
+              />
+              <i class="fa-solid fa-lock icon"></i>
+              <i class="fa-solid fa-eye-slash showidepw"></i>
+            </div>
+            <div class="checkbox-text">
+              <div class="checkbox-content">
+                <input type="checkbox" id="termCon" />
+                <label for="termCon" class="text"
+                  >I accept all terms and conditions.</label
+                >
+              </div>
+            </div>
+            <div class="input-field button">
+              <input type="submit" value="singup" />
+            </div>
+          </form>
+          <div class="login-signup">
+            <span class="text"
+              >Already a member?
+              <a href="index.html" class="text login-link">Login Now</a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
